@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live Stream Player</title>
+</head>
+<body>
+	<video autoplay></video>
+	<button id="btn1">Play</button>
+	<button id="btn2">Pause</button>
+	<script>
+	const constraints = {
+	  video: true
+	};
+
+	const video = document.querySelector('video');
+
+	navigator.mediaDevices.getUserMedia(constraints).
+	  then((stream) => {video.srcObject = stream});
+	</script>
+</body>
+</html>
